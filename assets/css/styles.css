@@ -20,6 +20,11 @@ body {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     color: var(--primary-color);
     margin: 0 50px;
+    background: #ffffff url("../img/art-deco-background.png") no-repeat left top;
+}
+
+a {
+    color: var(--accent3);
 }
 
 .subheading {
@@ -127,6 +132,7 @@ header nav ul li:hover {
     padding-left: 10px;
     font-weight: lighter;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .desc p {
@@ -170,6 +176,20 @@ header nav ul li:hover {
     font-family: var(--callout-text);
 }
 
+#open-in-tab a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 18px;
+    float: right;
+    padding-right: 5px;
+    padding-bottom: 2px;
+}
+
+#open-in-tab a:hover {
+    border-right: 1px inset var(--accent2);
+    border-bottom: 1px inset var(--accent2);
+}
+
 .project img {
     width: 250px;
 }
@@ -202,6 +222,11 @@ button {
     border: none;
     color: var(--accent2);
     font-family: var(--callout-text);
+}
+
+button:hover {
+    text-decoration: underline;
+    color: var(--accent3);
 }
 
 .end-callout button {
@@ -259,5 +284,8 @@ button {
     .content-box-social {
         width: 100%;
     }
-    
+
+    .content-box-blank {
+        justify-content: center;
+    }
 }
