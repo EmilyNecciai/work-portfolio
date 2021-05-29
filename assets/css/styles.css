@@ -1,0 +1,263 @@
+* {
+    background-color: #28282B;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #E5E4E2;
+    --secondary-color: #097969;
+    --shadows: black;
+    --accent1: #5F8575;
+    --accent2: #808000;
+    --accent3: #B87333;
+    --callout-text: Georgia, 'Times New Roman', Times, serif;
+    --code-text: monospace;
+}
+
+body {
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--primary-color);
+    margin: 0 50px;
+}
+
+.subheading {
+    padding: 15px;
+    color: #40826D;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky;
+    position: -webkit-sticky;
+    z-index: 99;
+    top: 0;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+    background-color: #28282B;
+}
+
+header h1 {
+    text-align: left;
+    font-family: var(--callout-text);
+    font-size: 42px;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* NAVIGATION BAR */
+
+header nav {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin: 15px;
+}
+
+header nav ul li:hover {
+    border-bottom: 2px inset var(--accent3);
+    border-right: 2px inset var(--accent3);
+    box-shadow: var(--shadows);
+    font-family: var(--callout-text);
+}
+
+/* SUBHEADING */
+
+.subheading h2 {
+    text-align: right;
+    font-family: var(--callout-text);
+    font-style: oblique;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+
+/* PORTFOLIO CONTENT */
+
+.portfolio-section {
+    display: flex;
+    flex: wrap;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    width: 10%;
+    align-items: flex-start;
+    text-align: right;
+    font-family: var(--callout-text);
+    color: var(--accent1);
+    padding-right: 15px;
+    font-size: 24px;
+}
+
+
+/* IN THE BOXES */
+.headline-callout {
+    border-top: 2px outset var(--accent3);
+    border-left: 2px outset var(--accent3);
+    width: 80px;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.headline-callout h4 {
+    padding-left: 10px;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.desc p {
+    padding-left: 18px;
+    padding-right: 20px;
+    font-size: 14px;
+}
+
+.content-box {
+    width: 90%;
+}
+
+
+
+
+/* SUB CONTENT BOXES */
+
+.content-box-blank {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.project {
+    padding-left: 18px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.project h5 {
+    border-top: 2px outset var(--accent2);
+    border-left: 2px outset var(--accent2);
+    width: 250px;
+    position: relative;
+    bottom: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 14px;
+    font-family: var(--callout-text);
+}
+
+.project img {
+    width: 250px;
+}
+
+.project p {
+    font-family: var(--code-text);
+    text-align: center;
+    border-right: 2px inset var(--accent2);
+    border-bottom: 2px inset var(--accent2);
+    width: 250px;
+    padding-bottom: 15px;
+}
+
+
+.content-box-form {
+    width: 80%;
+}
+
+.content-box-social {
+    width: 200px;
+}
+
+
+
+/* BUTTONS AND BOTTOM CORNERS */
+
+button {
+    float: right;
+    padding: 15px;
+    border: none;
+    color: var(--accent2);
+    font-family: var(--callout-text);
+}
+
+.end-callout button {
+    border-bottom: 2px inset var(--accent3);
+    border-right: 2px inset var(--accent3);
+}
+
+
+
+/* MEDIA QUERIES FOR MOBILE -------------------------------------------------------------  */
+
+@media screen and (max-width: 980px) {
+    header {
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+    }    
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
+
+    nav ul {
+        padding: 5px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subheading h2 {
+        text-align: center;
+    }
+
+    .portfolio-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        padding: 0 0 15px 0;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        left: 25px;
+    }
+
+    .content-box-form, 
+    .content-box-social {
+        width: 100%;
+    }
+    
+}
