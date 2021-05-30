@@ -19,8 +19,10 @@
 body {
     font-family: Tahoma, Geneva, Verdana, sans-serif;
     color: var(--primary-color);
-    margin: 0 50px;
-    background: #ffffff url("../img/art-deco-background.png") no-repeat left top;
+}
+
+.content {
+    margin: 0 50px 0 50px;
 }
 
 a {
@@ -155,6 +157,27 @@ header nav ul li:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+}
+
+.intro {
+    width: 70%;
+    height: 160px;
+}
+
+.avatar {
+    width: 30%;
+    align-items: center;
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+}
+
+.avatar img {
+    height: 150px;
+    margin-top: 5px;
+    border-top: 2px outset var(--accent2);
+    border-left: 2px outset var(--accent2);
 }
 
 .project {
@@ -234,7 +257,64 @@ button:hover {
     border-right: 2px inset var(--accent3);
 }
 
+.socials {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 10px;
+}
 
+.socials i {
+    font-size: 35px;
+    padding: 3px;
+}
+
+
+/* FORM */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 18px;
+    justify-content: space-between;
+    padding-top: 10px;
+    flex-direction: column;
+    padding-right: 25px;
+}
+
+form label {
+    font-size: 16px;
+    color: var(--accent1);
+    margin-top: 15px;
+}
+
+form input, 
+form textarea {
+    font-size: 16px;
+    width: 100%;
+    margin-top: 5px;
+    color: var(--primary-color);
+}
+
+textarea {
+    height: 100px;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;;
+}
+
+form input:focus, 
+form textarea:focus {
+    border: var(--accent2);
+}
+
+form button {
+    background-color: var(--accent3);
+    color: #28282B;
+    width: 50%;
+    margin-top: 15px;
+    font-size: 16px;
+}
 
 /* MEDIA QUERIES FOR MOBILE -------------------------------------------------------------  */
 
@@ -288,4 +368,68 @@ button:hover {
     .content-box-blank {
         justify-content: center;
     }
+
+}
+
+
+@media screen and (max-width: 575px) {
+    header {
+        justify-content: center;
+        padding-right: 0;
+        padding-left: 0;
+    }    
+
+    header h1 {
+        width: 100%;
+        text-align: center;
+        position: sticky;
+        top: 0;
+    }
+
+    nav ul {
+        padding: 5px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .subheading h2 {
+        text-align: center;
+    }
+
+    .portfolio-section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-title {
+        padding: 0 0 15px 0;
+        width: 100%;
+        text-align: left;
+        position: relative;
+        left: 25px;
+    }
+
+    .content-box-form, 
+    .content-box-social {
+        width: 100%;
+    }
+
+    .content-box-blank {
+        justify-content: center;
+    }    
+    
+    .avatar img {
+        height: 75px;
+    }    
+
+
+    .project {
+        width: 70%;
+    }
+
 }
