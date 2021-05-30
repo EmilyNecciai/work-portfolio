@@ -32,6 +32,7 @@ a {
 .subheading {
     padding: 15px;
     color: #40826D;
+    margin: 0 50px 0 50px;
 }
 
 /* HEADER */
@@ -39,15 +40,16 @@ a {
 header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     position: sticky;
     position: -webkit-sticky;
     z-index: 99;
     top: 0;
-    align-items: center;
     padding: 15px;
     width: 100%;
     background-color: #28282B;
+    align-items: center;
+    box-shadow: 0 2px 3px var(--shadows);
 }
 
 header h1 {
@@ -84,8 +86,9 @@ header nav ul a {
 header nav ul li:hover {
     border-bottom: 2px inset var(--accent3);
     border-right: 2px inset var(--accent3);
-    box-shadow: var(--shadows);
+    box-shadow: 1px 1px 2px var(--shadows);
     font-family: var(--callout-text);
+    font-style: oblique;
 }
 
 /* SUBHEADING */
@@ -109,13 +112,14 @@ header nav ul li:hover {
 }
 
 .section-title {
-    width: 10%;
+    width: 20%;
     align-items: flex-start;
     text-align: right;
     font-family: var(--callout-text);
     color: var(--accent1);
     padding-right: 15px;
     font-size: 24px;
+    font-style: oblique;
 }
 
 
@@ -123,6 +127,7 @@ header nav ul li:hover {
 .headline-callout {
     border-top: 2px outset var(--accent3);
     border-left: 2px outset var(--accent3);
+    box-shadow: inset 2px 2px 3px var(--shadows);
     width: 80px;
     padding-top: 15px;
     padding-left: 5px;
@@ -144,7 +149,7 @@ header nav ul li:hover {
 }
 
 .content-box {
-    width: 90%;
+    width: 100%;
 }
 
 
@@ -153,11 +158,10 @@ header nav ul li:hover {
 /* SUB CONTENT BOXES */
 
 .content-box-blank {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .intro {
@@ -178,8 +182,10 @@ header nav ul li:hover {
     margin-top: 5px;
     border-top: 2px outset var(--accent2);
     border-left: 2px outset var(--accent2);
+    box-shadow: 2px 2px 3px var(--shadows);
 }
 
+.premiere-project,
 .project {
     padding-left: 18px;
     padding-right: 20px;
@@ -187,9 +193,16 @@ header nav ul li:hover {
     padding-bottom: 10px;
 }
 
+.premiere-project {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.premiere-project h5, 
 .project h5 {
     border-top: 2px outset var(--accent2);
     border-left: 2px outset var(--accent2);
+    box-shadow: inset 2px 2px 3px var(--shadows);
     width: 250px;
     position: relative;
     bottom: 15px;
@@ -217,11 +230,35 @@ header nav ul li:hover {
     width: 250px;
 }
 
+.premiere-project img {
+    width: 100%;
+    box-shadow: 3px 3px 3px var(--shadows);
+}
+
+.premiere-project:hover,
+.project:hover {
+    opacity: 0.5;
+}
+
+.premiere-project p {
+    font-family: var(--code-text);
+    text-align: center;
+    border-right: 2px inset var(--accent2);
+    border-bottom: 2px inset var(--accent2);
+    box-shadow: 2px 2px 3px var(--shadows);
+    width: 250px;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    align-self: flex-end;
+}
+
+
 .project p {
     font-family: var(--code-text);
     text-align: center;
     border-right: 2px inset var(--accent2);
     border-bottom: 2px inset var(--accent2);
+    box-shadow: 2px 2px 3px var(--shadows);
     width: 250px;
     padding-bottom: 15px;
 }
@@ -255,6 +292,7 @@ button:hover {
 .end-callout button {
     border-bottom: 2px inset var(--accent3);
     border-right: 2px inset var(--accent3);
+    box-shadow: 3px 3px 3px var(--shadows);
 }
 
 .socials {
@@ -269,7 +307,8 @@ button:hover {
 
 .socials i {
     font-size: 35px;
-    padding: 3px;
+    padding: 10px;
+    text-shadow: 3px 3px 3px var(--shadows);
 }
 
 
@@ -296,11 +335,13 @@ form textarea {
     width: 100%;
     margin-top: 5px;
     color: var(--primary-color);
+    box-shadow: 3px 3px 3px var(--shadows);
 }
 
 textarea {
     height: 100px;
-    font-family: Tahoma, Geneva, Verdana, sans-serif;;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 3px 3px 3px var(--shadows);
 }
 
 form input:focus, 
@@ -314,6 +355,11 @@ form button {
     width: 50%;
     margin-top: 15px;
     font-size: 16px;
+    box-shadow: 3px 3px 3px var(--shadows);
+}
+
+form button:hover {
+    color: var(--shadows);
 }
 
 /* MEDIA QUERIES FOR MOBILE -------------------------------------------------------------  */
@@ -328,12 +374,11 @@ form button {
     header h1 {
         width: 100%;
         text-align: center;
-        position: sticky;
-        top: 0;
     }
 
     nav ul {
         padding: 5px;
+        width: 100%;
     }
 
     nav ul li {
