@@ -401,8 +401,6 @@ form button:hover {
         padding: 0 0 15px 0;
         width: 100%;
         text-align: left;
-        position: relative;
-        left: 25px;
     }
 
     .content-box-form, 
@@ -455,8 +453,6 @@ form button:hover {
         padding: 0 0 15px 0;
         width: 100%;
         text-align: left;
-        position: relative;
-        left: 25px;
     }
 
     .content-box-form, 
@@ -472,9 +468,17 @@ form button:hover {
         height: 75px;
     }    
 
-
-    .project {
-        width: 70%;
+    .project img, 
+    .project h5,
+    .project p {
+        width: 100%;
     }
+
+    .premiere-project img, 
+    .premiere-project h5,
+    .premiere-project p {
+        width: 100%;
+    }
+
 
 }
