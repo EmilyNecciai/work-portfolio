@@ -47,7 +47,9 @@ header {
     top: 0;
     padding: 15px;
     width: 100%;
-    background-color: #28282B;
+    background: url("../img/art-deco.png") no-repeat, #28282B;
+    background-position: left;
+    background-size: contain;
     align-items: center;
     box-shadow: 0 2px 3px var(--shadows);
 }
@@ -366,13 +368,12 @@ form button:hover {
 
 @media screen and (max-width: 980px) {
     header {
-        justify-content: center;
+        justify-content: space-around;
         padding-right: 0;
         padding-left: 0;
     }    
 
     header h1 {
-        width: 100%;
         text-align: center;
     }
 
@@ -423,7 +424,6 @@ form button:hover {
     }    
 
     header h1 {
-        width: 100%;
         text-align: center;
         position: sticky;
         top: 0;
@@ -431,10 +431,10 @@ form button:hover {
 
     nav ul {
         padding: 5px;
+        border: 1px var(--accent2);
     }
 
     nav ul li {
-        width: 100%;
         text-align: center;
     }
 
